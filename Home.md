@@ -1,6 +1,7 @@
 # Welcome to the project Wiki
 
-This wiki serves as the central hub for documentation related to the **fe24-versionshantering-gritsquare-grupp2** project. Each team member is responsible for documenting their respective areas, ensuring the project is well-documented and easy to understand.
+The fe24-vc-slutprojekt is a collaborative project with the goal of contributing to a repo through forking. 
+Each group has contributed to external repos through forking, thereby sharing their features without being contributors. 
 
 ## Table of Contents
 

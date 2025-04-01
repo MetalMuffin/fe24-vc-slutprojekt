@@ -57,6 +57,11 @@ messageForm.addEventListener("submit", async (event) => {
   const messageText = document.getElementById("messageTxt").value;
   const color = createRandomColor();
 
+  if (messageText.length > maxLength) {
+    alert(`Message is too long! Please keep it under ${maxLength} characters.`);
+    return;
+  }  
+
   if (!selectedUserId || !messageText) {
     console.error("Username and message are required");
     return;
@@ -157,4 +162,18 @@ function createRandomColor() {
   const rgbColor = `rgb(${red}, ${green}, ${blue})`;
   console.log(rgbColor);
   return rgbColor;
+}
+
+const messageTxt = document.getElementById("messageTxt");
+const charCounter = document.getElementById("charCounter");
+const maxLength = 100;
+
+if (messageTxt && charCounter) {
+  messageTxt.addEventListener("input", () => {
+    const remaining = maxLength - messageTxt.value.length;
+    charCounter.textContent = `${remaining >= 0 ? remaining : 0} characters remaining`;
+    charCounter.style.color = remaining < 0 ? "red" : "#ffffffcc";
+  });
+
+  charCounter.textContent = `${maxLength} characters remaining`;
 }

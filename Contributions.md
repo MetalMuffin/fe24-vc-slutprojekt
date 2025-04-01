@@ -27,3 +27,5 @@
     * Pull Request: [Lade till like/dislike button](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/23)
 * **Search Feature** - By: [Linn Ahlrot](https://github.com/munchkin870411)
     * Pull Request: [search feature linn](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/24)
+* **Message Max Length** - By: [Marcel Cios](https://github.com/Marvelmta)
+    * Pull Requests: [text limitation marcel](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/26)

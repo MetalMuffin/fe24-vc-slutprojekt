@@ -1,5 +1,22 @@
-## Contributions made by non group members
+## Contributions made by group members
+* **Fireworks** - By: [Ida Lindkvist](https://github.com/MetalMuffin)
+    * Pull Request: [Fireworks feature](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/11)
+* **Messages spawn on random location** - By: [Adrian Tayeh](https://github.com/AdrianTayeh)
+    * Commit: [random location for msgs](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/commit/af89d669b1d0ce74bf8fb9783e4dba9570c23154)
+* **Added User implementation to extend shadow ban feature** - By: [Adrian Tayeh](https://github.com/AdrianTayeh)
+    * Commit: [Extended the shadow ban feature to include user functionality and proply sort out messages that are shadow banned](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/commit/3d8542211fffb6e9fec340af89bdca621a08dd73)
+* **Random border color** - By: [Gutaf Vingren](https://github.com/Sparven0)
+    * Pull Request: [adjusted vibrancy and threshold for border-colors](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/11)
+* **Remove Button** - By: [Gustaf Vingren](https://github.com/Sparven0)
+    * Pull Request: [removeButton added](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/7)
+* **Shake Effect** - By: [Gustaf Vingren](https://github.com/Sparven0)
+    * Pull Request: [updated shake effect v2](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/10)
+* **Dark Mode** - By: [Liibaan Abudlle](https://github.com/Azralii)
+    * Pull Request: [fixat ,Dark Mode och Light Mode](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/13)
+* **Profanity Filter** - By: [Gustaf Vingren](https://github.com/Sparven0)
+    * Pull Request: [Added profanity filter](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/15)
 ---
+## Contributions made by non group members
 * **Ability to pin messages** - By: [Leon Den Engelsen](https://github.com/leondenengelsen)
     * Pull Request: [You can now pin messages and they will stay in position, even when reloading page](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/20)
 * **Ability to shuffle messages location on screen** - By: [Leon Den Engelsen](https://github.com/leondenengelsen)
@@ -8,6 +25,5 @@
     * Pull Request: [shadow banned](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/8)
 * **Like and Dislike** - By: [Hampus Svensson](https://github.com/Hampeeeeeee)
     * Pull Request: [Lade till like/dislike button](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/23)
-
 * **Search Feature** - By: [Linn Ahlrot](https://github.com/munchkin870411)
     * Pull Request: [search feature linn](https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2/pull/24)

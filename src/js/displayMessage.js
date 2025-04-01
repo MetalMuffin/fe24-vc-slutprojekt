@@ -17,8 +17,34 @@ export function displayMessages(containerId) {
 
   const displayedMessages = {};
 
+  async function populateDropdown() {
+    const usernameSelect = document.getElementById("usernameSelect");
+
+    const usersSnapshot = await get(usersRef);
+    const users = usersSnapshot.val();
+    if (!users) {
+      console.error("Users not found");
+      return;
+    }
+    usernameSelect.innerHTML = "";
+    Object.entries(users).forEach(([id, user]) => {
+      const option = document.createElement("option");
+      option.value = id;
+      option.textContent = user.username;
+      usernameSelect.appendChild(option);
+    });
+
+    return true;
+  }
+
   async function updateDisplayedMessages(messages) {
-    const selectedUserId = document.getElementById("usernameSelect").value;
+    const usernameSelect = document.getElementById("usernameSelect");
+    const selectedUserId = usernameSelect.value;
+
+    if(!selectedUserId) {
+        console.error("No user selected");
+        return;
+    }
     const userRef = ref(database, `users/${selectedUserId}`);
     const userSnapshot = await get(userRef);
     const currentUser = userSnapshot.val();
@@ -49,7 +75,7 @@ export function displayMessages(containerId) {
       });
 
       sorted.forEach(([id, message]) => {
-        const messageUser = users[message.username];
+        // const messageUser = users[message.username];
 
         if (
           !message.shadowBanned ||
@@ -75,6 +101,30 @@ export function displayMessages(containerId) {
     const messages = snapshot.val();
     updateDisplayedMessages(messages);
   });
+
+  async function loadInitialMessages() {
+    const usernameSelect = document.getElementById("usernameSelect");
+    const dropdownPopulated = await populateDropdown();
+    if (!dropdownPopulated) {
+      console.error("Failed to populate dropdown");
+      return;
+    }
+
+    if(!usernameSelect.value){
+        const firstOption = usernameSelect.options[0];
+        if(firstOption){
+            usernameSelect.value = firstOption.value;
+        } else {
+            console.error("No users available in the dropdown");
+            return;
+        }
+    }
+    const messagesSnapshot = await get(messagesRef);
+    const messages = messagesSnapshot.val();
+    updateDisplayedMessages(messages);
+  }
+
+  loadInitialMessages();
 
   const usernameSelect = document.getElementById("usernameSelect");
   usernameSelect.addEventListener("change", async () => {
@@ -123,14 +173,36 @@ function createMessageElement(id, message, container, displayedMessages) {
   dislikeButtonEl.textContent = "👎";
   dislikeButtonEl.id = "dislikeButton";
 
-  likeButtonEl.addEventListener("click", function () {
-    likeButtonEl.classList.toggle("liked");
+  if(message.likes) {
+    likeButtonEl.classList.add("liked");
     dislikeButtonEl.classList.remove("disliked");
+  }
+    if(message.dislikes) {
+    dislikeButtonEl.classList.add("disliked");
+    likeButtonEl.classList.remove("liked");
+  }
+
+  likeButtonEl.addEventListener("click", async function () {
+    const isLiked = likeButtonEl.classList.toggle("liked");
+    dislikeButtonEl.classList.remove("disliked");
+
+    const updates = {
+        likes: isLiked,
+        dislikes: false,
+    };
+
+    await update(ref(database, `messages/${id}`), updates);
   });
 
-  dislikeButtonEl.addEventListener("click", function () {
-    dislikeButtonEl.classList.toggle("disliked");
-    likeButtonEl.classList.remove("liked");
+  dislikeButtonEl.addEventListener("click", async function () {
+    const isDisliked = dislikeButtonEl.classList.toggle("disliked");
+    likeButtonEl.classList.remove("liked"); 
+    const updates = {
+      likes: false, 
+      dislikes: isDisliked,
+    };
+
+    await update(ref(database, `messages/${id}`), updates);
   });
 
   // 🔁 Toggle pin state in Firebase + UI

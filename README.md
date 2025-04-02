@@ -35,7 +35,7 @@ The messaging board includes the following features:
 - **Like and Dislike**: React to messages with likes or dislikes.
 - **Search Functionality**: Search for specific messages.
 - **Message Length Limitation**: Restrict the maximum length of messages.
-- **Random Effects**: Add vibrancy with random border colors, shake effects, and more.
+- **Random Effects**: Add vibrancy with random border colors, shake effects, fireworks when posting, and more.
 
 These features make the board interactive, user-friendly, and visually engaging.
 

@@ -49,13 +49,13 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/AdrianTayeh/fe24-versionshantering-gritsquare-grupp2.git
 2. **Navigate to the Project Directory**:
-    ```bash
+    ```shell
     cd fe24-versionshantering-gritsquare-grupp2
 3. **Install Dependencies**:
-    ```bash
+    ```shell
     npm install
 4. **Run the Application**:
-    ```bash
+    ```shell
     npm run dev
 
 ---

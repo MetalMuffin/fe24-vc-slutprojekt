@@ -8,4 +8,3 @@ Each group has contributed to external repos through forking, thereby sharing th
 1. [Project Overview](./Project-Overview)
 2. [Contributions](./Contributions)
 3. [Design Choices](./Design-Choices)
-5. [JavaScript Documentation](./JavaScript-Documentation)

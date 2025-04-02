@@ -29,7 +29,7 @@ The messaging board includes the following features:
 
 - **Post Messages**: Users can post messages to the board.
 - **Dark Mode**: Toggle between light and dark themes.
-- **Profanity Filter**: Automatically filters inappropriate language.
+- **Profanity Filter**: Alerts on inappropriate language.
 - **Pin Messages**: Keep important messages fixed in place.
 - **Shuffle Messages**: Randomize the position of messages on the board.
 - **Like and Dislike**: React to messages with likes or dislikes.

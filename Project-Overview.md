@@ -1,2 +1,2 @@
 The fe24-vc-slutprojekt is a collaborative project with the goal of contributing to a repo through forking. 
-Each group has contributed to external repos through forking, thereby sharing their features without being contributors. 
+Each group has contributed to external repos through forking, thereby sharing their features without being contributors. lägg till
